@@ -1,0 +1,13 @@
+{% if words %}
+<ul class="list-group">
+  {% for word in words %}
+  <li class="list-group-item">
+    <a class="word-display" data-id="{{ word.pk }}" href="">
+      {{ word.word }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<li class="list-group-item">No word found in database</li>
+{% endif %}
